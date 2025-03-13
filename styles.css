@@ -7,10 +7,11 @@
 header{
     background-color: antiquewhite;
     box-sizing: border-box;
-    min-width: 330px;
+    min-width: 300px;
     display: flex;
     flex: initial;
-    padding: 10px;
+    padding: 6px;
+    margin-bottom: 5px;
     justify-content: center;
     align-items: center;
     gap: 10%;
@@ -97,7 +98,6 @@ main{
 @media screen and (max-width: 700px){
     main{
         flex-direction: column;
-        justify-content: stretch;
         align-items: stretch;
     }
     .container{
@@ -106,6 +106,7 @@ main{
         justify-content: center;
         align-items: center;
         gap: 10px;
+        padding: 0;
     }
     .text-container{
         font-size: 1rem;
