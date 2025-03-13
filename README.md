@@ -18,7 +18,7 @@
     <li><p>A geração do hexadecimal é feita através de um vetor com números (de 0 a 9) e letras de (A a F).</p></li>
     <li><p>O índice do vetor é pego aleatóriamente com o uso de <code>Math.floor()</code> e <code>Math.random()</code>.</p></li>
     <li><p>Um loop pega o valor do vetor 6 vezes e os armazena, gerando o hexadecimal.</p></li>
-    <li><p>Depois disso, é realizado uma manipulação do DOM, onde acessa a cor de fundo de uma div e insire o hexadecimal como novo valor.</p></li>
+    <li><p>Depois disso, é realizado uma manipulação do DOM, onde acessa a cor de fundo de uma div e insere o hexadecimal como novo valor.</p></li>
 </ol>
 <br>
 <h2>
