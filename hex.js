@@ -1,10 +1,8 @@
-const btn = document.getElementById("cor-btn");
+const btns = [...document.getElementsByClassName("btn")]
 const hexadecimal = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
-const fundo = document.getElementsByTagName("body")[0]
-const cor = document.getElementById("cor")
-function trocarCor(){
+function trocarCor(div, cor){
     let hex = gerarCor()
-    fundo.style.backgroundColor = hex;
+    div.style.backgroundColor = hex;
     cor.textContent = hex
 }
 
@@ -17,4 +15,17 @@ function gerarCor(){
     return hex
 }
 
-btn.addEventListener("click", () => trocarCor())
+btns.map(btn => {
+    let container = btn.parentElement.parentElement;
+    let div = container.children[0];
+    let cor = btn.parentElement.children[0]
+    btn.addEventListener("click", () => trocarCor(div, cor))
+})
+
+window.addEventListener("DOMContentLoaded", ()=>{
+    const divs = [...document.getElementsByClassName("color-container")]
+    divs.map(div => {
+        let text = div.nextElementSibling.children[0]
+        trocarCor(div, text)
+    })
+})
